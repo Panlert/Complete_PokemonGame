@@ -119,11 +119,11 @@ public class Duelfield extends JFrame{
                         atk.setText("finish duel");
                         setAlreadyDead(-1);
                     }
-                    else{
+                    /*else{
                         System.out.println("cmd is close");
                         setCmd("close");
                         frame.setVisible(false);
-                    }
+                    }*/
                     
                 }else if(!atk.isSelected() && !atk.getText().equals("finish duel")){
                     e.getAttack(p.attack());
@@ -148,15 +148,16 @@ public class Duelfield extends JFrame{
                         atk.setText("finish duel");
                         setAlreadyDead(1);
                     }
-                    else{
+                    /*else{
                         System.out.println("cmd is close");
                         setCmd("close");
                         frame.setVisible(false);
-                    }
+                    }*/
 
                     
                 }else{
                     System.out.println("cmd is close with alrdead");
+                    p.setStatus(p.getoHP(), p.getoMP(), p.getoAtkDmg());
                     setCmd("close");
                     frame.setVisible(false);
                 }

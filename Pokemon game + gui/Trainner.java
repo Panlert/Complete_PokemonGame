@@ -1,8 +1,7 @@
 import javax.swing.*;
 
-public class Trainner extends JFrame{
+public class Trainner{
     private BagGUI bag;
-    private static final long serialVersionUID = 1L;
     
     public Trainner(){
         this.bag = new BagGUI();
@@ -230,10 +229,7 @@ public class Trainner extends JFrame{
     }
 
     private void resetStatus(Pokemon p){//after pokemon fight
-        int HP=p.getoHP();
-        int MP=p.getoMP();
-        int Atk=p.getoAtkDmg();
-        p.setStatus(HP, MP, Atk);
+        p.setStatus(p.getoHP(), p.getoMP(), p.getoAtkDmg());
     }
 
     public void delay(int i){

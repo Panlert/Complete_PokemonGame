@@ -33,7 +33,7 @@ public class PickballGUI extends JFrame
         frame.setTitle("pokemon game");
         frame.setResizable(false);
         frame.setSize(400,200);
-        //frame.setLocationRelativeTo(null);
+        frame.setLocationRelativeTo(null);
         PicAndGif g = new PicAndGif();
 
         final JPanel comboPanel = new JPanel();

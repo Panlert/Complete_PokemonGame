@@ -9,6 +9,7 @@ public abstract class Pokemon{
         this.oName = this.name;
         lv = 1;
         exp = 0;
+        statusSAVE();
     }
     public Pokemon(){
 
