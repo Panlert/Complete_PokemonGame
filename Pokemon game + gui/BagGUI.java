@@ -116,9 +116,16 @@ public class BagGUI extends JFrame{
                 if(getCmd().equals("close") || getCmd().equals("")){
                     setCmdClose();
                     setVisible(false);
-                }else{
+                }else if(getCmd().equals("change name")){
+                    JOptionPane ms = new JOptionPane();
+                    pokeball.get(i).setName(JOptionPane.showInputDialog( ms, "Enter your new pokemon name."));
+                    item[i].setText(pokeball.get(i).toString());
+                    SwingUtilities.updateComponentTreeUI(item[i]);
+                }
+                else{
                     JOptionPane ms = new JOptionPane();
                     JOptionPane.showMessageDialog ( ms, pokeball.get(i).toStringStatus());
+                    
                 }
             }
         });

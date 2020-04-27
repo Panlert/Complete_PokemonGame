@@ -83,6 +83,10 @@ public class Trainner extends JFrame{
                     }
                 }
             }
+            else if(cmd.equals("change name")){
+                choosePokeball(cmd);
+                cmd = play.resetCmd();
+            }
             else{
                 cmd = play.resetCmd();
             }
@@ -145,16 +149,16 @@ public class Trainner extends JFrame{
             int i=-1;
             try{
                 i = Integer.parseInt(JOptionPane.showInputDialog( ms, "Enter the amount of berries"));
-            }catch(NumberFormatException e){
+            }
+            catch(NumberFormatException e){
                 JOptionPane.showMessageDialog(ms, "Pls Enter a number");
                 i = Integer.parseInt(JOptionPane.showInputDialog( ms, "Enter the amount of berries"));
             }
-            System.out.println("----------------  "+i+"  -------------");
             if( bag.useBerry(i) && i != 0 ){
-                    System.out.println("---------*-------  "+i+"  ------*-------");
-                    p.lvUp(100*i);
-                    JOptionPane.showMessageDialog(ms, p.toStringStatus());
-            }else{
+                p.lvUp(100*i);
+                JOptionPane.showMessageDialog(ms, p.toStringStatus());
+            }
+            else{
                 JOptionPane.showMessageDialog(ms, "Not enough berry.");
             }
         }
@@ -169,7 +173,9 @@ public class Trainner extends JFrame{
     private Pokemon choosePokeball(String cmd){
         if(cmd.equals("feed"))
             bag.openBagGUI("");
-        else
+        else if(cmd.equals("change name"))
+            bag.openBagGUI("change name");
+        else 
             bag.openBagGUI("open");
 
         while(!bag.getCmd().equals("close")){

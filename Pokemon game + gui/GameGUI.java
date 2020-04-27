@@ -71,7 +71,7 @@ public class GameGUI extends JFrame
 
 //--------------dropdown-------------------------------------------------------
 
-        String[] trainnerOptions = {"findPokemon", "feed", "status", "quit"};
+        String[] trainnerOptions = {"findPokemon", "feed", "status", "change name", "quit"};
 
         final JPanel comboPanel = new JPanel();
         JLabel combolB = new JLabel("Trainner choice: ");
@@ -96,7 +96,11 @@ public class GameGUI extends JFrame
                    setCmd("status");
                    System.out.println("STATUS");
                 }
-                else if(choice.getSelectedItem() == "quit"){
+                else if(choice.getSelectedItem() == "change name"){
+                    setCmd("change name");
+                    System.out.println("CHANGE NAME");
+                }
+                else{
                     setCmd("quit");
                     frame.setVisible(false);
                 }

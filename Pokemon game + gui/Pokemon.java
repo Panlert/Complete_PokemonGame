@@ -1,11 +1,12 @@
 public abstract class Pokemon{
     
-    private String name;
+    private String name,oName;
     private int lv,HP,MP,atkDMG,exp;
     private int olv,oHP,oMP,oatkDMG,oExp;
     
     public Pokemon(String name){
         this.name = name;
+        this.oName = this.name;
         lv = 1;
         exp = 0;
     }
@@ -20,6 +21,9 @@ public abstract class Pokemon{
     }
     public String toString(){
         return this.name+"";
+    }
+    public String oldNametoString(){
+        return this.oName;
     }
     public void setStatus(int HP, int MP, int atkDMG){
         this.HP = HP;

@@ -47,18 +47,34 @@ public class Duelfield extends JFrame{
         JLabel background = new JLabel(bg);
         
         ImageIcon pPic;
-        if(p.toString().equals("Pickachu")){
-            pPic = new ImageIcon(g.getPicAndGif(14));
-            pLabel.setIcon(pPic);
-        }else if(p.toString().equals("Charmander")){
-            pPic = new ImageIcon(g.getPicAndGif(16));
-            pLabel.setIcon(pPic);
-        }else if(p.toString().equals("Squirtle")){
-            pPic = new ImageIcon(g.getPicAndGif(18));
-            pLabel.setIcon(pPic);
+        if(!p.toString().equals(p.oldNametoString())){
+            if(p.oldNametoString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(14));
+                pLabel.setIcon(pPic);
+            }else if(p.oldNametoString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(16));
+                pLabel.setIcon(pPic);
+            }else if(p.oldNametoString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(18));
+                pLabel.setIcon(pPic);
+            }else{
+                pPic = new ImageIcon(g.getPicAndGif(20));
+                pLabel.setIcon(pPic);
+            }
         }else{
-            pPic = new ImageIcon(g.getPicAndGif(20));
-            pLabel.setIcon(pPic);
+            if(p.toString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(14));
+                pLabel.setIcon(pPic);
+            }else if(p.toString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(16));
+                pLabel.setIcon(pPic);
+            }else if(p.toString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(18));
+                pLabel.setIcon(pPic);
+            }else{
+                pPic = new ImageIcon(g.getPicAndGif(20));
+                pLabel.setIcon(pPic);
+            }
         }
         pLabel.setBounds(50, 350, 300, 300);
             
@@ -165,14 +181,26 @@ public class Duelfield extends JFrame{
     public void p_Reface(JLabel p, JFrame frame, Pokemon pR){
         PicAndGif g = new PicAndGif();
         ImageIcon pPic;
-        if(pR.toString().equals("Pickachu")){
-            pPic = new ImageIcon(g.getPicAndGif(14));
-        }else if(pR.toString().equals("Charmander")){
-            pPic = new ImageIcon(g.getPicAndGif(16));
-        }else if(pR.toString().equals("Squirtle")){
-            pPic = new ImageIcon(g.getPicAndGif(18));
+        if(!pR.toString().equals(pR.oldNametoString())){
+            if(pR.oldNametoString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(14));
+            }else if(pR.oldNametoString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(16));
+            }else if(pR.oldNametoString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(18));
+            }else{
+                pPic = new ImageIcon(g.getPicAndGif(20));
+            }
         }else{
-            pPic = new ImageIcon(g.getPicAndGif(20));
+            if(pR.toString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(14));
+            }else if(pR.toString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(16));
+            }else if(pR.toString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(18));
+            }else{
+                pPic = new ImageIcon(g.getPicAndGif(20));
+            }
         }
         pLabel.setIcon(pPic);
         SwingUtilities.updateComponentTreeUI(frame);
@@ -181,21 +209,40 @@ public class Duelfield extends JFrame{
         PicAndGif g = new PicAndGif();
         ImageIcon pPic;
         ImageIcon pPicf;
-        if(pG.toString().equals("Pickachu")){
-            pPic = new ImageIcon(g.getPicAndGif(15));
-            pPicf = new ImageIcon(g.getPicAndGif(i));
-        }
-        else if(pG.toString().equals("Charmander")){
-            pPic = new ImageIcon(g.getPicAndGif(17));
-            pPicf = new ImageIcon(g.getPicAndGif(i));
-        }
-        else if(pG.toString().equals("Squirtle")){
-            pPic = new ImageIcon(g.getPicAndGif(19));
-            pPicf = new ImageIcon(g.getPicAndGif(i));
-        }
-        else{
-            pPic = new ImageIcon(g.getPicAndGif(21));
-            pPicf = new ImageIcon(g.getPicAndGif(i));
+        if(!pG.toString().equals(pG.oldNametoString())){
+            if(pG.oldNametoString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(15));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else if(pG.oldNametoString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(17));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else if(pG.oldNametoString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(19));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else{
+                pPic = new ImageIcon(g.getPicAndGif(21));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+        }else{
+            if(pG.toString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(15));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else if(pG.toString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(17));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else if(pG.toString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(19));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
+            else{
+                pPic = new ImageIcon(g.getPicAndGif(21));
+                pPicf = new ImageIcon(g.getPicAndGif(i));
+            }
         }
         pLabel.setIcon(pPic);
         pHP.setIcon(pPicf);
@@ -205,17 +252,32 @@ public class Duelfield extends JFrame{
         PicAndGif g = new PicAndGif();
         ImageIcon pPic;
         ImageIcon pPicf = new ImageIcon(g.getPicAndGif(25));
-        if(pD.toString().equals("Pickachu")){
-            pPic = new ImageIcon(g.getPicAndGif(27));
-        }
-        else if(pD.toString().equals("Charmander")){
-            pPic = new ImageIcon(g.getPicAndGif(28));
-        }
-        else if(pD.toString().equals("Squirtle")){
-            pPic = new ImageIcon(g.getPicAndGif(29));
-        }
-        else{
-            pPic = new ImageIcon(g.getPicAndGif(30));
+        if(!pD.toString().equals(pD.oldNametoString())){
+            if(pD.oldNametoString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(27));
+            }
+            else if(pD.oldNametoString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(28));
+            }
+            else if(pD.oldNametoString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(29));
+            }
+            else{
+                pPic = new ImageIcon(g.getPicAndGif(30));
+            }
+        }else{
+            if(pD.toString().equals("Pickachu")){
+                pPic = new ImageIcon(g.getPicAndGif(27));
+            }
+            else if(pD.toString().equals("Charmander")){
+                pPic = new ImageIcon(g.getPicAndGif(28));
+            }
+            else if(pD.toString().equals("Squirtle")){
+                pPic = new ImageIcon(g.getPicAndGif(29));
+            }
+            else{
+                pPic = new ImageIcon(g.getPicAndGif(30));
+            }
         }
         pLabel.setIcon(pPic);
         pHP.setIcon(pPicf);
